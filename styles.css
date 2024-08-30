@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Fredoka One', cursive;
+  background: linear-gradient(135deg, #15002b, #2b002b);
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+#settings, #end-screen, #game-board {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.title-image {
+  width: 800px; /* Increase the size of the logo */
+  margin-bottom: 30px; /* Space between logo and buttons */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 15px;
+  background: #00002b;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 6px 6px 0px rgb(5, 0, 32);
+  width: 320px;
+  height: 70px;
+  line-height: 35px;
+  margin: 10px; /* Reduced margin for better spacing */
+  font-family: 'Fredoka One', cursive;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #15002b, #00152b);
+  transform: translateY(-3px);
+}
+
+button:active {
+  background: linear-gradient(145deg, #37474f, #263238);
+  transform: translateY(3px);
+}
+
+#score-timer-container {
+  background: linear-gradient(135deg, #263238, #37474f);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#score-display, #timer-display {
+  font-size: 28px;
+  margin: 10px;
+  color: #e0e0e0;
+  display: inline-block;
+  font-family: 'Fredoka One', cursive;
+}
+
+#score-display {
+  font-size: 36px;
+  margin-right: 20px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.grid-box {
+  width: 120px;
+  height: 120px;
+  background-color: #37383a;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-box.active {
+  background-color: #8e24aa;
+  transform: scale(1.1);
+  animation: boxBounce 0.5s;
+  box-shadow: 0 0 15px rgba(142, 36, 170, 0.8);
+}
+
+@keyframes boxBounce {
+  0% { transform: scale(1.1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+#score-timer-container {
+  background: linear-gradient(135deg, #263238, #37474f);
+}
+
+#score-display, #timer-display {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Fredoka One', cursive;
+}
+
+#final-score {
+  font-size: 36px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Fredoka One', cursive;
+}
